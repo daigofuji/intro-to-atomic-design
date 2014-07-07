@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>What is Atomic Web Design and Pattern-Lab? by Daigo Fujiwara</title>
+
+		<meta name="description" content="I want you to be as excited as I am about Atomic Web Design and Pattern-Lab.">
+		<meta name="author" content="Daigo Fujiwara">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,700,300,800' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+
+		<link rel="stylesheet" href="css/daigo.simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h2 style="light">What is <strong>Atomic Web Design</strong> and how can <strong>Pattern-Lab</strong> help us with hbr.org redesign?</h2>
+						<p>
+							<small>By Daigo Fujiwara, Feb 14, 2014 (rev 2)</small>
+						</p>
+						<img src="img/hbr_logo.svg" style="width:150px" class="no-shadow" alt="HBR">
+					</section>
+					<section>
+						<p>
+							In this 30 min. meeting, I will introduce you to the concept of <strong>Atomic Web Design</strong> and a tool that is installed for us to use internally, <strong>Pattern-Lab</strong>.
+						</p>
+						<p>
+							I want us to start the conversation among us, and be familiar with this "<em>building-blocks</em>" approach.
+						</p>
+
+						<aside class="notes">
+							Thank everyone for coming. I know everyone is busy and I really appreciate your time. 
+							I try to be as "jargon-free" as possible, but please stop me if there is any technical terms that you don't know, or need clarification. 
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2><strong>Atomic Web Design</strong></h2>
+						<img src="img/atomic-web-design.gif" alt="">
+
+						<p>
+							<strong>A methodology used to construct web design systems.</strong> 
+						</p>
+						<p>
+							Created by Brad Frost.
+						</p>
+						<p><small><a target= "_blank" href="http://bradfrostweb.com/blog/post/atomic-web-design/">bradfrostweb.com/blog/post/atomic-web-design</a></small></p>
+
+						<aside class="notes">
+							It's an idea, approach, philosophy. Bare with me, you'll see this image again and again. I'll explain it a bit later.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Atomic Web Design<small>2/3</small></h2>
+						<p><strong>Who is Brad Frost?</strong></p>
+						<p>
+							Brad Frost created a website called <a target= "_blank" href="http://bradfrost.github.io/this-is-responsive/">This is Responsive</a> which is a great collection of responsive patterns and modules. 
+						</p>
+						<p>
+							He recently worked on <a target= "_blank" href="http://techcrunch.com/2013/10/15/techcrunch-has-redesigned-again/">Tech Crunch's</a> responsive redesign, and <a target= "_blank" href="http://globalmoxie.com/blog/entertainment-weekly.shtml">Entertainment Weekly's</a> responsive mobile site.
+						</p>
+						
+						<p>
+							He is a thought leader in world of Responsive Design and he <a target= "_blank" href="http://bradfrostweb.com/speaking/">speaks at a lot of conferences.</a>
+						</p>
+
+						<aside class="notes">
+							
+						</aside>
+
+					</section>
+
+
+					<section>
+						<h2>Atomic Web Design <small>3/3</small></h2>
+						<img src="img/atomic-web-design.gif" alt="">
+						<p>
+							<strong><a target= "_blank" href="http://bradfrostweb.com/blog/post/atomic-web-design/">Reusable building-blocks</a></strong> that can be combined into a web page.    
+						</p>
+						<aside class="notes">
+							Brad quotes Stephen Hay, who wrote a book called "Responsive Design Workflow" (http://responsivedesignworkflow.com/).  "We’re not designing pages, we’re designing systems of components." I will try to use word "building-blocks" instead of "components" but you just need to know if I say "components" that just atoms, molecules or organism.
+ 						</aside>
+					</section>
+
+
+
+				</section>
+				<section>
+					<section>
+						<h2>But back up a bit...</h2>
+						<p>
+							What we don't have currently is<br/> <strong>a browser-based web front-end style guide</strong>.
+						</p>
+						<p>The style guide can help us with:</p>
+
+						<ul>
+							<li>Design Consistency</li>
+							<li>Code Standard <span class="light">(i.e. html structure, css class names)</span></li>
+							<li>Responsive Web Design</li>
+						</ul>
+
+						<aside class="notes">
+							This is different from the style guide that HUGE is delivering. It is also sometimes called "Pattern Library" but for this talk, I will stick with style guide.
+						</aside>
+					</section>
+					<section>
+						<h3>Benefits of a <strong><a target= "_blank" href="http://www.fivesimplesteps.com/products/front-end-style-guides">front-end style guide</a></strong></h3>
+						<ul>
+							<li>Being able to test responsive design <span class="light">("Where does this design break?")</span></li>
+							<li>Improved workflow <span class="light">(See it in browser, feedback and collaboration)</span></li>
+							<li>Shared vocabulary <span class="light">(Design/Tech/Edit "What do you call this building block?")</span></li>
+							<li>Future reference <span class="light">("What's available? What needs to be designed/coded next?")</span></li>
+						</ul>
+						<p><small>Adapted from <a target= "_blank" href="http://24ways.org/2011/front-end-style-guides/">Front-end Style Guides</a> by Anna Debenham</small></p>
+
+						<aside class="notes">
+							<strong>Test. Workflow. Vocabulary. Reference.</strong>
+							Anna Debenham wrote an excellent ebook called "Front End Style Guides" -- I have a copy if anyone is interested.
+							http://www.fivesimplesteps.com/products/front-end-style-guides
+						</aside>
+					</section>
+
+					<section>
+						
+						<h3>Example of front-end style guide</h3>
+						
+						<ul>
+							<li><a target= "_blank" href="https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides-and-pattern-libraries">Debenham's style guide collection</a></li>
+							<li><a target= "_blank" href="http://www.bbc.co.uk/gel">BBC</a></li>
+							<li><a target= "_blank" href="http://www.starbucks.com/static/reference/styleguide/">Starbucks</a></li>
+							<li><a target= "_blank" href="https://github.com/styleguide">GitHub</a></li>
+							<li><a target= "_blank" href="http://ux.mailchimp.com/patterns/">MailChimp</a></li>
+						</ul>						
+						<aside class="notes">
+							Quickly show BBC, Starbucks. 
+						</aside>
+					</section>
+					<section>
+						<h3>
+						Those style guides are great, but...
+						</h3>
+						<ul>
+							<li>Time consuming to create</li>
+							<li>Seen only as a designer/developer tool</li>
+							<li>Often too abstract</li>
+							<li>Often too incomplete and/or out-of-date</li>
+						</ul>
+
+					</section>
+
+
+					<section>
+						<h3>
+						Instead of writing style guide <em>after redesign is finished</em>, we'll <strong>build &amp; test small building-blocks that will later <em>become</em> our front-end style guide</strong>.
+						</h3>
+						<aside class="notes">
+							This is what I am proposing.
+						</aside>
+					</section>
+					
+					
+
+				</section>
+				<section>
+
+					<section>
+						<h2>Back to Atomic Web Design</h2>
+
+						<blockquote>
+						“Atomic design gives us the ability to traverse from abstract to concrete. Because of this, we can create systems that promote consistency and scalability while simultaneously showing things in their final context. And <strong>by assembling rather than deconstructing</strong>, we’re crafting a system right out of the gate instead of cherry picking patterns after the fact.” 
+						</blockquote>
+						<p class="right">- <a target= "_blank" href="http://bradfrostweb.com/blog/post/atomic-web-design/">Brad Frost</a></p>
+					</section>
+
+					<section>
+						<h2><strong><a target= "_blank" href="http://bradfrostweb.com/blog/post/atomic-web-design/">Atomic Web Design</a></strong></h2>
+						<img src="img/atomic-web-design.gif" alt="">
+						<p>
+							Think of molecules and organisms <strong>as Lego-like building blocks</strong> designed to be combined together.
+						</p>
+						<aside class="notes">
+							This is where I explain atomic web design -- abstract (atoms) to concrete(pages).
+							Atoms -- which are not terribly useful on their own. but, they’re great as a reference for (almost) every elements on the website. 
+							Think of molecules and organisms <strong>as Lego-like building blocks</strong> designed to be <strong>combined</strong> together.
+							Those make up the templates, and eventually, with "real content", become pages. 
+							Development is mainly done in the middle three stages. Atoms are reference, pages are where things gets reviewed.
+						</aside>
+					</section>
+
+					<section>
+						<h2>That sounds great. <br/> 
+						But <strong>how</strong> are we going to pull that off?</h2>
+						
+						<aside class="notes">
+							?
+						</aside>
+					</section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Meet <strong>Pattern-Lab</strong></h2>
+						<img src="img/pattern-lab.png" alt="Pattern-Lab">
+						<p>
+							An open source tool to create the Atomic Web Design system that will  become the "living" front-end style guide. 
+						</p>
+						<p><a target= "_blank" href="http://pattern-lab.info/">pattern-lab.info</a> (also created by Brad Frost)</p>
+					</section>
+
+					<section>
+						<h2>What does <strong>Pattern-Lab</strong> give us?</h2>
+						<ol>
+							<li>Visual library of building blocks</li>
+							<li>Viewport resizer</li>
+							<li>Annotation and Code viewer</li>
+						</ol>
+
+
+					<aside class="notes">
+						building blocks = (Atoms, Molecules, Organism)<br>
+						Annotation is like a "design notes or comments."
+					</aside>
+						
+					</section>
+					<section>
+						<h1><a target= "_blank" href="http://demo.patternlab.io/">Demo</a></h1>
+						<p><small>Follow along at <a target= "_blank" href="http://demo.patternlab.io/">http://demo.patternlab.io/</a></small></p>
+						<aside class="notes">
+							<ol>
+								<li>Visual Library of building blocks (Atoms, Molecules, Organism):
+								</li>
+								<li>Viewport resizer: 
+								</li>
+								<li>Annotation/Code viewer: 
+								</li>
+							</ol>
+						</aside>
+					</section>
+
+
+					<section>
+						<h2><strong>Pattern-Lab</strong></h2>
+						<p>
+							Available to use within HBR intranet: <a target= "_blank" href="http://demo.patternlab.io/">http://demo.patternlab.io/</a>. (Although not much is in there, yet.) <small>Note: Link has been replaced by public demo.</small> 
+						</p>
+						<p>
+							Source is hosted in our private github repo.
+						</p>
+						<aside class="notes">
+							Thanks to Kevin Davis, Pattern-Lab have been installed and available for us to use. 
+							If anyone needs access to github, it is a private repo. Contact me, Matt, or Kevin D.
+						</aside>
+					</section>
+					<section>
+						<h3>Pattern-Lab benefits (1/4)</h3>
+						<p>
+						It can serves as <strong>a hub for the creation process</strong>
+						</p>
+						<ul>
+							<li>Collaboration through feedback.</li>
+							<li><a target= "_blank" href="http://24ways.org/2013/project-hubs/">Designing / deciding in the browser.</a></li>
+							<li>Useful tool for everyone: information architects, designers, developers, editors</li>
+						</ul>
+						
+						<aside class="notes">
+							Designing / deciding in the browser. "Does this work? Is this what you mean?"
+						</aside>
+					</section>
+					<section>
+						<h3>Pattern-Lab benefits (2/4)</h3>
+						<p>
+						Can easily traverse from <strong>abstract to concrete</strong>
+						<ul>
+							<li>Test building-blocks in abstract, or in context</li>
+							<li>Develop alternate style, or "Themes"</li>
+							<li>Find reusable pieces / building-blocks</li>
+							<li>Only evolve certain section of the page</li>
+						</ul>
+						<img src="img/atomic-web-design.gif" alt="">
+
+						</p>
+						<aside class="notes">
+							I can build the entire page in template, then decide to break it down to building blocks. 
+						</aside>
+					</section>
+					<section>
+						<h3>Pattern-Lab benefits (3/4)</h3>
+						<p>
+						Production ready html with meaningful css class names
+						<ul>
+							<li>Internal <strong>vocabulary depository</strong> between editors, designers, and developers</li>
+							<li>Don't have to talk about this if no time: <a target= "_blank" href="https://www.readability.com/developers/guidelines">hNews microformat</a> (?)</li>
+						</ul>
+
+						</p>
+						<aside class="notes">
+							Replaced the word <strong>semantic</strong> with Meaningful.
+							"What is that component called? Teaser? Slug? hgroup? Related list? Article tool box?" I don't really care what to call them but we have to agree on it, and use it as it was intended. Create new if you need one.
+						</aside>
+					</section>
+					<section>
+						<h3>Pattern-Lab benefits (4/4)</h3>
+						<p>
+
+						<strong>Documentation / annotation</strong> depository
+						<ul>
+							<li>Writing documentation as you actually create things on website.</li>
+							<li>Avoids duplicate work, changes are documented</li>
+						</ul>
+						</p>
+						<aside class="notes">
+							Last one should be pretty self explanatory. 
+						</aside>
+					</section>
+
+
+
+
+
+					<section>
+						<h3><strong>Under the hood</strong></h3>
+						<p>
+							Won't go into details, but for those interested (read: geeks), Pattern-Lab is built with:
+						</p>
+						<ul>
+							<li><strong><a target= "_blank" href="http://php.net/">PHP</a></strong> to build static page from html folder structure</li>
+							<li><strong><a target= "_blank" href="http://mustache.github.io/#demo">Mustache</a></strong> template syntax</li>
+							<li>JSON data for content, html is structure only</li>
+							<li>We are using <a target= "_blank" href="http://foundation.zurb.com/">Zurb's Foundation</a>, and <a target= "_blank" href="http://sass-lang.com/">SASS</a>/<a target= "_blank" href="http://compass-style.org/">Compass</a> to generate css. Pattern-Lab will be synced up with the production CSS via <a target= "_blank" href="https://github.com/">GitHub</a></li>
+						</ul>
+						<aside class="notes">
+							JSON stands for JavaScript Object Notation.
+						</aside>
+					</section>
+					
+				</section>
+
+
+
+				<section>
+					<section>
+						<h2>Take away</h2>
+						<p>
+							The goal of this meeting is <strong>to start conversations</strong> about Atomic Web Design approach and Pattern-Lab.
+						</p>
+						<p>
+							I want you to be as excited about this as I am. I am still learning. Ask me questions, let's collaborate. 
+						<p>
+						</p>
+							<strong>A lot of potential</strong>, but useless if we don't use it in our workflow.
+						</p>
+						
+						<aside class="notes">
+							EMPAHSIS ON <strong>A LOT OF POTENTIAL</strong>. This is not me telling you what to do, but rather, I want to work with everyone on this. 
+						</aside>
+					</section>
+					<section>
+						<h2>How will we use it?</h2>
+						<p>
+							When HUGE's design comes in, we'll break them down into building-blocks using Pattern-Lab. Then, using Alfresco/Surf, we'll put the pieces together.
+						</p>
+						<img src="img/huge3.png" alt="HUGE - Atomic - HBR" class="no-border">
+						<aside class="notes">
+							notes
+						</aside>
+					</section>					
+					<section>
+						<h2>What's next?</h2>
+						<ul>
+							<li>Be familier with <a target= "_blank" href="http://alistapart.com/article/responsive-web-design/">Responsive Web Design</a>,</li>
+							<li>and also <a target= "_blank" href="http://www.lukew.com/ff/entry.asp?933">Mobile First</a> approach</li>
+							<li>Perhaps learn github? <a target= "_blank" href="http://try.github.io/">try.github.io</a></li>
+							<li><a target= "_blank" href="http://blog.programmableweb.com/2009/10/13/cope-create-once-publish-everywhere/">COPE (Create Once, Publish Everywhere)</a> philosophy of NPR.</li>
+						</ul>
+						<aside class="notes">
+							notes
+						</aside>
+					</section>
+
+					<section>
+						<h2>Thank you</h2>
+						
+						<h3><a target= "_blank" href="http://demo.patternlab.io/">demo.patternlab.io</a></h3>
+						<img src="img/awesome.png
+						" alt="">
+						<p>Please ask questions, use the tool, explore.</p>
+
+						<img src="img/hbr_logo.svg" style="width:150px" class="no-shadow">
+
+					</section>
+
+				</section>
+<!--
+					<section>
+						<h2>head</h2>
+						<p>
+							Content
+						</p>
+						<aside class="notes">
+							notes
+						</aside>
+					</section>
+-->
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

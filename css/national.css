@@ -1,0 +1,82 @@
+/* national font  -- edited to fix faux italic/bold
+http://www.metaltoad.com/blog/how-use-font-face-avoid-faux-italic-and-bold-browser-styles
+font-weight: Light is 200, Normal is 400, Bold is 700, Extra Black is 900
+*/
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Regular.eot");
+  src: url("../fonts/NationalWeb-Regular.eot");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Italic.eot");
+  src: local("?"),
+    url("../fonts/NationalWeb-Italic.woff") format("woff"),    
+    url("../fonts/NationalWeb-Italic.svg#filename") format("svg");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Light.eot");
+  src: local("?"),
+    url("../fonts/NationalWeb-Light.woff") format("woff"),    
+    url("../fonts/NationalWeb-Light.svg#filename") format("svg");
+  font-weight: 200;
+  font-style: normal;    
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-LightItalic.eot");
+  src: local("?"),
+    url("../fonts/NationalWeb-LightItalic.woff") format("woff"),    
+    url("../fonts/NationalWeb-LightItalic.svg#filename") format("svg");
+  font-weight: 200;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Semibold.eot");
+  src: local("?"),
+    url("../fonts/NationalWeb-Semibold.woff") format("woff"),    
+    url("../fonts/NationalWeb-Semibold.svg#filename") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Semibold-Italic.eot");
+  src: local("?"),
+    url("../fonts/NationalWeb-Semibold-Italic.woff") format("woff"),    
+    url("../fonts/NationalWeb-Semibold-Italic.svg#filename") format("svg");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Extrabold.eot");
+  src: local("?"),
+    url("../fonts/NationalWeb-Extrabold.woff") format("woff"),    
+    url("../fonts/NationalWeb-Extrabold.svg#filename") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "National";
+  src: url("../fonts/NationalWeb-Extrabold-Italic.eot");
+  src: local("?"),
+    url("../fonts/NationalWeb-Extrabold-Italic.woff") format("woff"),    
+    url("../fonts/NationalWeb-Extrabold-Italic.svg#filename") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: normal;
+}
